@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "es2015",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "strictNullChecks": true,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": false,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "typeRoots": ["node_modules/@types", "src/types"],
+    "declaration": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "incremental": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "importHelpers": true
+  },
+  "include": ["src", "store.ts"],
+  "exclude": ["node_modules", "dist"]
+}
