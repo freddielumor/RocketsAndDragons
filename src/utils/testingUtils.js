@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider as ReduxProvider } from 'react-redux'
 import thunk from 'redux-thunk'
@@ -17,7 +18,11 @@ const mockStore = createStore(rootReducer, initialState, applyMiddleware(thunk))
 
 // 2. Create a test provider containing the state
 const testWrapper = ({ children }) => {
-  return <ReduxProvider store={mockStore}>{children}</ReduxProvider>
+  return (
+    <Router>
+      <ReduxProvider store={mockStore}>{children}</ReduxProvider>
+    </Router>
+  )
 }
 
 // 3. Create the test render function which is used in our test files
