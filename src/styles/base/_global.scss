@@ -28,3 +28,27 @@ a {
     width: 85%;
   }
 }
+
+.pageNotFound {
+  text-align: center;
+
+  &__heading {
+    color: $black;
+    font-size: 2rem;
+    margin-top: 4rem;
+  }
+
+  &__link {
+    flex-direction: column;
+    min-width: 6rem;
+    margin-top: 0;
+    padding: 1rem 3rem;
+    background-color: #f54e75;
+    color: #ffffff;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #b70a32;
+    }
+  }
+}
