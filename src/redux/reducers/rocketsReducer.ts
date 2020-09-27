@@ -2,11 +2,11 @@ import {
   GET_ROCKETS_DATA_START,
   GET_ROCKETS_DATA_SUCCESS,
   GET_ROCKETS_DATA_ERROR,
-} from '../actions/rockets'
+} from '../actions/rocketsActions'
 
 const initialState = {
   rockets: [],
-  rocketsLoaded: false,
+  stage: 'pending',
   error: null,
 }
 
@@ -19,12 +19,13 @@ export default function (state = initialState, action: any) {
     case GET_ROCKETS_DATA_SUCCESS:
       return {
         ...state,
+        stage: 'success',
         rockets: action.payload,
-        rocketsLoaded: true,
       }
     case GET_ROCKETS_DATA_ERROR:
       return {
         ...state,
+        stage: 'error',
         error: action.payload,
       }
     default:
