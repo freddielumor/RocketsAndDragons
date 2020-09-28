@@ -9,6 +9,7 @@ import { AppNav } from './components/Nav/Nav'
 import Rockets from './components/Rockets/Rockets'
 import Dragons from './components/Dragons/Dragons'
 import RocketItem from './components/RocketItem/RocketItem'
+import DragonItem from './components/DragonItem/DragonItem'
 import PageNotFound from './components/PageNotFound/PageNotFound'
 import './styles/base/index.scss'
 
@@ -27,12 +28,16 @@ const App: React.FC<IAppProps> = () => (
             <Rockets />
           </Route>
 
-          <Route path="/dragons">
+          <Route exact path="/rockets/:rocket_id">
+            <RocketItem />
+          </Route>
+
+          <Route exact path="/dragons">
             <Dragons />
           </Route>
 
-          <Route path="/rockets/:rocket_id">
-            <RocketItem />
+          <Route exact path="/dragons/:id">
+            <DragonItem />
           </Route>
 
           <Route path="*" exact>

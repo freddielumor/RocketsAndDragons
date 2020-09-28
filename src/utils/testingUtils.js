@@ -16,7 +16,7 @@ import '@testing-library/jest-dom'
 const initialState = {}
 const mockStore = createStore(rootReducer, initialState, applyMiddleware(thunk))
 
-// 2. Create a test provider containing the state
+// 2. Create a test provider containing the state & router
 const testWrapper = ({ children }) => {
   return (
     <Router>
