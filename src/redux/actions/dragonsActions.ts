@@ -1,24 +1,28 @@
+import { Dispatch } from 'redux'
 import fetchData from '../../utils/fetchData'
 import { DRAGONS_DATA_ENDPOINT } from '../../utils/apiConfig'
+import {
+  GET_DRAGONS_DATA_START,
+  GET_DRAGONS_DATA_SUCCESS,
+  GET_DRAGONS_DATA_ERROR,
+} from '../../types/dragonActionTypes'
+import { AllDragons } from '../../types/dragon'
+import { AppActions } from '../../types/appActionTypes'
 
-export const GET_DRAGONS_DATA_START = 'GET_DRAGONS_DATA_START'
-export const GET_DRAGONS_DATA_SUCCESS = 'GET_DRAGONS_DATA_SUCCESS'
-export const GET_DRAGONS_DATA_ERROR = 'GET_DRAGONS_DATA_ERROR'
-
-export const getDragonsDataStart = () => {
+export const getDragonsDataStart = (): AppActions => {
   return {
     type: GET_DRAGONS_DATA_START,
   }
 }
 
-export const getDragonsDataSuccess = (payload: any) => {
+export const getDragonsDataSuccess = (payload: AllDragons[]): AppActions => {
   return {
     type: GET_DRAGONS_DATA_SUCCESS,
     payload,
   }
 }
 
-export const getDragonsDataError = (payload: any) => {
+export const getDragonsDataError = (payload: string): AppActions => {
   return {
     type: GET_DRAGONS_DATA_ERROR,
     payload,
@@ -26,7 +30,7 @@ export const getDragonsDataError = (payload: any) => {
 }
 
 export function getDragonsData() {
-  return async (dispatch: any) => {
+  return async (dispatch: Dispatch<AppActions>) => {
     dispatch(getDragonsDataStart())
 
     try {

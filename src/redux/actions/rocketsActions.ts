@@ -1,24 +1,28 @@
+import { Dispatch } from 'redux'
 import fetchData from '../../utils/fetchData'
 import { ROCKETS_DATA_ENDPOINT } from '../../utils/apiConfig'
+import {
+  GET_ROCKETS_DATA_START,
+  GET_ROCKETS_DATA_SUCCESS,
+  GET_ROCKETS_DATA_ERROR,
+} from '../../types/rocketActionTypes'
+import { AllRockets } from '../../types/rocket'
+import { AppActions } from '../../types/appActionTypes'
 
-export const GET_ROCKETS_DATA_START = 'GET_ROCKETS_DATA_START'
-export const GET_ROCKETS_DATA_SUCCESS = 'GET_ROCKETS_DATA_SUCCESS'
-export const GET_ROCKETS_DATA_ERROR = 'GET_ROCKETS_DATA_ERROR'
-
-export const getRocketsDataStart = () => {
+export const getRocketsDataStart = (): AppActions => {
   return {
     type: GET_ROCKETS_DATA_START,
   }
 }
 
-export const getRocketsDataSuccess = (payload: any) => {
+export const getRocketsDataSuccess = (payload: AllRockets[]): AppActions => {
   return {
     type: GET_ROCKETS_DATA_SUCCESS,
     payload,
   }
 }
 
-export const getRocketsDataError = (payload: any) => {
+export const getRocketsDataError = (payload: string): AppActions => {
   return {
     type: GET_ROCKETS_DATA_ERROR,
     payload,
@@ -26,7 +30,7 @@ export const getRocketsDataError = (payload: any) => {
 }
 
 export function getRocketsData() {
-  return async (dispatch: any) => {
+  return async (dispatch: Dispatch<AppActions>) => {
     dispatch(getRocketsDataStart())
 
     try {

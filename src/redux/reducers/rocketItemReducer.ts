@@ -1,39 +1,39 @@
 import {
-  GET_ROCKETS_DATA_START,
-  GET_ROCKETS_DATA_SUCCESS,
-  GET_ROCKETS_DATA_ERROR,
+  GET_ROCKET_ITEM_DATA_START,
+  GET_ROCKET_ITEM_DATA_SUCCESS,
+  GET_ROCKET_ITEM_DATA_ERROR,
 } from '../../types/rocketActionTypes'
-import { AllRockets } from '../../types/rocket'
-import { RockesActionTypes } from '../../types/rocketActionTypes'
+import { Rocket } from '../../types/rocket'
+import { SingleRocketActionTypes } from '../../types/rocketActionTypes'
 
 interface IState {
-  rockets: AllRockets[]
+  rocket: Rocket[]
   stage: string
   error: string | null
 }
 
-const initialState = {
-  rockets: [],
+const initialState: IState = {
+  rocket: [],
   stage: 'pending',
   error: null,
 }
 
 export default function (
   state = initialState,
-  action: RockesActionTypes,
+  action: SingleRocketActionTypes,
 ): IState {
   switch (action.type) {
-    case GET_ROCKETS_DATA_START:
+    case GET_ROCKET_ITEM_DATA_START:
       return {
         ...state,
       }
-    case GET_ROCKETS_DATA_SUCCESS:
+    case GET_ROCKET_ITEM_DATA_SUCCESS:
       return {
         ...state,
         stage: 'success',
-        rockets: action.payload,
+        rocket: action.payload,
       }
-    case GET_ROCKETS_DATA_ERROR:
+    case GET_ROCKET_ITEM_DATA_ERROR:
       return {
         ...state,
         stage: 'error',

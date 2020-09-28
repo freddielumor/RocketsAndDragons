@@ -1,39 +1,39 @@
 import {
-  GET_DRAGONS_DATA_START,
-  GET_DRAGONS_DATA_SUCCESS,
-  GET_DRAGONS_DATA_ERROR,
+  GET_DRAGON_ITEM_DATA_START,
+  GET_DRAGON_ITEM_DATA_SUCCESS,
+  GET_DRAGON_ITEM_DATA_ERROR,
 } from '../../types/dragonActionTypes'
-import { AllDragons } from '../../types/dragon'
-import { DragonsActionTypes } from '../../types/dragonActionTypes'
+import { Dragon } from '../../types/dragon'
+import { SingleDragonActionTypes } from '../../types/dragonActionTypes'
 
 interface IState {
-  dragons: AllDragons[]
+  dragon: Dragon[]
   stage: string
   error: string | null
 }
 
 const initialState: IState = {
-  dragons: [],
+  dragon: [],
   stage: 'pending',
   error: null,
 }
 
 export default function (
   state = initialState,
-  action: DragonsActionTypes,
+  action: SingleDragonActionTypes,
 ): IState {
   switch (action.type) {
-    case GET_DRAGONS_DATA_START:
+    case GET_DRAGON_ITEM_DATA_START:
       return {
         ...state,
       }
-    case GET_DRAGONS_DATA_SUCCESS:
+    case GET_DRAGON_ITEM_DATA_SUCCESS:
       return {
         ...state,
         stage: 'success',
-        dragons: action.payload,
+        dragon: action.payload,
       }
-    case GET_DRAGONS_DATA_ERROR:
+    case GET_DRAGON_ITEM_DATA_ERROR:
       return {
         ...state,
         stage: 'error',
