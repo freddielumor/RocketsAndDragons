@@ -1,13 +1,13 @@
 import * as React from 'react'
-import { render } from '@testing-library/react'
-import '@testing-library/jest-dom'
+import { render } from '../../../utils/testingUtils'
+import 'jest-styled-components'
 
 import Rockets from '../Rockets'
 
 describe('<Rockets />', () => {
   test('should display rockets text', async () => {
-    const { getByText } = render(<Rockets />)
-
-    getByText('ROCKETS')
+    const { getByText, debug } = render(<Rockets />)
+    debug()
+    getByText('FRED')
   })
 })
