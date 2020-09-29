@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: './src/index.tsx',
-  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -50,4 +49,7 @@ module.exports = {
       inject: 'body',
     }),
   ],
+  optimization: {
+    minimize: true,
+  },
 }

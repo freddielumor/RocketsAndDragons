@@ -1,4 +1,7 @@
-import * as React from "react";
-import { RouteComponentProps } from "@reach/router";
-declare const Rockets: React.FC<RouteComponentProps>;
+import * as React from 'react';
+interface RocketProps {
+    path?: string;
+    exact?: boolean;
+}
+declare const Rockets: React.FC<RocketProps>;
 export default Rockets;

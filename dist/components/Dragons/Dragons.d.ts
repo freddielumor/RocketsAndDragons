@@ -1,4 +1,6 @@
-import * as React from "react";
-import { RouteComponentProps } from "@reach/router";
-declare const Dragons: React.FC<RouteComponentProps>;
+import * as React from 'react';
+interface DragonProps {
+    path?: string;
+}
+declare const Dragons: React.FC<DragonProps>;
 export default Dragons;
