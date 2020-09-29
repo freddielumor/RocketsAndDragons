@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Header correctly 1`] = `
+.c0 {
+  text-align: center;
+}
+
+<div>
+  <header
+    class="c0"
+  >
+    <div />
+  </header>
+</div>
+`;
