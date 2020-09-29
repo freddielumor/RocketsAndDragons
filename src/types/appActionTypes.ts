@@ -1,11 +1,14 @@
-import { RockesActionTypes, SingleRocketActionTypes } from './rocketActionTypes'
+import {
+  RocketsActionTypes,
+  SingleRocketActionTypes,
+} from './rocketActionTypes'
 import {
   DragonsActionTypes,
   SingleDragonActionTypes,
 } from './dragonActionTypes'
 
 export type AppActions =
-  | RockesActionTypes
+  | RocketsActionTypes
   | SingleRocketActionTypes
   | DragonsActionTypes
   | SingleDragonActionTypes

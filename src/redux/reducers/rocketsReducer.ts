@@ -4,7 +4,7 @@ import {
   GET_ROCKETS_DATA_ERROR,
 } from '../../types/rocketActionTypes'
 import { AllRockets } from '../../types/rocket'
-import { RockesActionTypes } from '../../types/rocketActionTypes'
+import { RocketsActionTypes } from '../../types/rocketActionTypes'
 
 interface IState {
   rockets: AllRockets[]
@@ -20,7 +20,7 @@ const initialState = {
 
 export default function (
   state = initialState,
-  action: RockesActionTypes,
+  action: RocketsActionTypes,
 ): IState {
   switch (action.type) {
     case GET_ROCKETS_DATA_START:

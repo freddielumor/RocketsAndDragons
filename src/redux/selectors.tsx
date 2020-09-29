@@ -12,6 +12,6 @@ export const dragonsDataStageSelector = (state: any) => state.dragonsData.stage
 export const dragonsDataSelector = (state: any) => state.dragonsData.dragons
 
 // Dragon Item Selcectors
-export const dragonsItemStageSelector = (state: any) =>
+export const dragonItemStageSelector = (state: any) =>
   state.dragonItemData.stage
 export const dragonItemSelector = (state: any) => state.dragonItemData.dragon

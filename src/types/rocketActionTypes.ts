@@ -19,7 +19,7 @@ export interface GetRocketsDataErrorAction {
   payload: string
 }
 
-export type RockesActionTypes =
+export type RocketsActionTypes =
   | GetRocketsDataPendingAction
   | GetRocketsDataSuccessAction
   | GetRocketsDataErrorAction
