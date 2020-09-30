@@ -51,7 +51,7 @@ const RocketItem: React.FC = () => {
   const firstFlightDate = new Date(first_flight)
 
   return (
-    <section className="rockets__item">
+    <section>
       <PageTitle>{rocket_name}</PageTitle>
 
       <Divider width={50} />

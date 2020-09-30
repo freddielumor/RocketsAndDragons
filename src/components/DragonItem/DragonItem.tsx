@@ -53,7 +53,7 @@ const DragonItem: React.FC = () => {
     return <LoadingSpinner src={loadingImage} alt="Loading" />
 
   return (
-    <section className="rockets__item">
+    <section>
       <PageTitle>{name}</PageTitle>
 
       <Divider width={50} />

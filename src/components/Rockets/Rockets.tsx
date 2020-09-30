@@ -34,7 +34,7 @@ const Rockets: React.FC<RocketProps> = () => {
   if (rocketsDataIsEmpty) return <NoData>Data Currently Unavailable</NoData>
 
   return (
-    <section className="rockets">
+    <section>
       <PageTitle>rockets</PageTitle>
 
       <Content>

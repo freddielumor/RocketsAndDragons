@@ -33,13 +33,12 @@ const Dragons: React.FC<DragonProps> = () => {
   if (dragonsDataIsEmpty) return <NoData>Data Currently Unavailable</NoData>
 
   return (
-    <section className="rockets">
+    <section>
       <PageTitle>dragons</PageTitle>
 
       <Content>
         {dragonsData.map((dragon: any) => {
           const dragonUrl = `/dragons/${dragon.id}`
-          console.log('dragonUrl', dragonUrl)
 
           return (
             <Card
