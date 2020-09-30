@@ -9,6 +9,7 @@ import { getRocketsData } from '../../redux/actions/rocketsActions'
 import loadingImage from '../../images/loading.svg'
 import { LoadingSpinner, Content, NoData } from '../Shared/index.styled'
 import Card from '../Card/Card'
+import { AllRockets } from '../../types/rocket'
 
 interface RocketProps {
   path?: string
@@ -38,7 +39,7 @@ const Rockets: React.FC<RocketProps> = () => {
       <PageTitle>rockets</PageTitle>
 
       <Content>
-        {rocketsData.map((rocket: any) => {
+        {rocketsData.map((rocket: AllRockets) => {
           const rocketUrl = `/rockets/${rocket.rocket_id}`
 
           return (

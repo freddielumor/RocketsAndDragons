@@ -9,6 +9,7 @@ import { getDragonsData } from '../../redux/actions/dragonsActions'
 import loadingImage from '../../images/loading.svg'
 import { LoadingSpinner, Content, NoData } from '../Shared/index.styled'
 import Card from '../Card/Card'
+import { AllDragons } from '../../types/dragon'
 
 interface DragonProps {
   path?: string
@@ -37,7 +38,7 @@ const Dragons: React.FC<DragonProps> = () => {
       <PageTitle>dragons</PageTitle>
 
       <Content>
-        {dragonsData.map((dragon: any) => {
+        {dragonsData.map((dragon: AllDragons) => {
           const dragonUrl = `/dragons/${dragon.id}`
 
           return (

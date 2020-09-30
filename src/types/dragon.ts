@@ -2,7 +2,7 @@
 export interface AllDragons {
   id: string
   name: string
-  images: string[]
+  flickr_images: string[]
   description: string
   type: string
   active: boolean

@@ -1,11 +1,13 @@
 // All Rocket Data Types
 export interface AllRockets {
   id: number
+  rocket_id: number
   rocket_name: string
   flickr_images: string[]
   description: string
   company: string
   active: boolean
+  rocket_type: string
 }
 
 // Single Rocket Data Types
